@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -16,14 +15,12 @@ public class Main {
             String inputFromUser = input.nextLine();
 
             switch (inputFromUser) {
-                case "1":
+                case "1":                  
                     System.out.println("Please enter the number of employees that you would like to pay out salary to.");
                     System.out.print("Input: ");
                     arrayLength = input.nextInt();
                     int[] employees = new int[arrayLength];
                     double tax = 0.30;
-
-                    System.out.println("Invalid input. Please enter a number.");
 
                     for (int i = 0; i < employees.length; i++) {
                         System.out.println("Please enter the salary for employee nr " + (i + 1));
@@ -36,13 +33,13 @@ public class Main {
                         double afterTax = (salary * tax);
                         int sum = (int) Math.round(salary - afterTax);
 
-                        System.out.println("The salary for employee nr " + (i + 1) + " after a tax deduction of 30% is " + sum + " dollhairs.");
+                        System.out.println("The salary for employee nr " + (i + 1) + " after a tax deduction of 30% is " + sum + " dollars.");
                     }
                     menu.methodMenu();
                     break;
 
                 case "2":
-                    System.out.println("The current balance on your account is " + accountBalance + " dollhairs.");
+                    System.out.println("The current balance on your account is " + accountBalance + " dollars.");
                     System.out.println("Please enter the total sum of the invoice that you want to create.");
                     System.out.print("Input: ");
 
@@ -51,10 +48,10 @@ public class Main {
                     int sum = (int) Math.round(totalSumInvoice);
                     System.out.println();
 
-                    System.out.println("The total sum of your account balance and the invoice you want to create is " + (accountBalance + userInput) + " dollhairs.");
-                    System.out.println("The gross total for your invoice is " + userInput + " dollhairs.");
-                    System.out.println("The total sum of sales tax is " + sum + " dollhairs.");
-                    System.out.println("The net sum of your invoice is " + (userInput - sum) + " dollhairs.");
+                    System.out.println("The total sum of your account balance and the invoice you want to create is " + (accountBalance + userInput) + " dollars.");
+                    System.out.println("The gross total for your invoice is " + userInput + " dollars.");
+                    System.out.println("The total sum of sales tax is " + sum + " dollars.");
+                    System.out.println("The net sum of your invoice is " + (userInput - sum) + " dollars.");
                     menu.methodMenu();
                     break;
 
@@ -77,10 +74,10 @@ public class Main {
                         invoiceTotal += invoices[i];
                     }
                     System.out.println("");
-                    System.out.println("The total sum of your invoices is " + invoiceTotal + " dollhairs.");
+                    System.out.println("The total sum of your invoices is " + invoiceTotal + " dollars.");
 
                     totalBalance = (accountBalance - invoiceTotal);
-                    System.out.println("Your account balance will be " + (totalBalance) + " dollhairs after your invoices has been paid.");
+                    System.out.println("Your account balance will be " + (totalBalance) + " dollars after your invoices has been paid.");
                     menu.methodMenu();
                     break;
                 case "4":
@@ -88,7 +85,7 @@ public class Main {
                     running = false;
                     break;
                 default:
-                    System.out.println("Something went wrong, please enter a valid choice from the menu.");
+                    System.out.println("Not valid input. Please enter a valid choice from the menu.");
             }
         }
     }
