@@ -1,4 +1,4 @@
-// initierar scanner för att kunna ta in användarens input
+// importerar scannerklassen för att kunna ta in användarens input
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -85,7 +85,7 @@ public class Main {
                     int invoiceTotal = 0;
                     int totalBalance = 0;
 
-                    // ny ny array, invoices, av datatypen integer vars indexstorlek skall motsvara användarens input
+                    // ny array, invoices, av datatypen integer vars indexstorlek skall motsvara användarens input
                     System.out.println("Please enter the number of invoices you would like to pay.");
                     System.out.print("Input: ");
                     arrayLength = input.nextInt();
