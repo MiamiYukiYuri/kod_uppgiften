@@ -1,3 +1,4 @@
+// initierar scanner för att kunna ta in användarens input
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -13,8 +14,8 @@ public class Main {
         int arrayLength = 0;
         boolean running = true;
 
-        // while-loop för menyval 4: avsluta programmet
-        // initierar scanner och skapar variabel för användarens input att använda switchen
+        // while-loop för menyval 4 med boolean running satt till true, vilket innebär att loopen kommer köra så länge running inte är = false
+        // ny skanner, input, och ny variabel för att ta emot användarens input; inputFromUser
         while (running) {
             Scanner input = new Scanner(System.in);
             String inputFromUser = input.nextLine();
